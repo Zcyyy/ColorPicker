@@ -1,0 +1,3 @@
+/home/zhang/Documents/colorPicker/build/CMakeFiles/rebuild_cache.dir
+/home/zhang/Documents/colorPicker/build/CMakeFiles/colorPicker.dir
+/home/zhang/Documents/colorPicker/build/CMakeFiles/edit_cache.dir
