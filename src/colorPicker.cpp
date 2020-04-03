@@ -7,7 +7,7 @@
 #include<yaml-cpp/emitter.h>
 #include<stdio.h>
 #include<string>
-#pragma warning(disable:4996) //½â¾ösprintf³öÏÖerror C4996ÎÊÌâ
+#pragma warning(disable:4996) //è§£å†³sprintfå‡ºç°error C4996é—®é¢˜
 
 using namespace cv;
 using namespace std;
@@ -51,9 +51,8 @@ void colorPicker::on_mouse(int event, int x, int y, int flags, void*ustc){
 		{
 			for (int j = 0; j < image.cols; ++j)
 			{
-				
 				Point w = Point(j, i);
-					if (image.at<Vec3b>(w)[0] == a && image.at<Vec3b>(w)[1] == b )
+				if (image.at<Vec3b>(w)[0] == a && image.at<Vec3b>(w)[1] == b )
 				{
 					circle(image, w, 0.5, Scalar(255), 1);
 				}
@@ -83,7 +82,7 @@ void colorPicker::run()
 		imshow("img", temp1);
 	}
 }
-//TODO::ÓÃvector´æÊı¾İ£¬×îºóÔÚÒ»×éÒ»×éÌáÈ¡²¢ÇÒĞ´Èë¡£
+//TODO::ç”¨vectorå­˜æ•°æ®ï¼Œæœ€ååœ¨ä¸€ç»„ä¸€ç»„æå–å¹¶ä¸”å†™å…¥ã€‚
 int main()
 {
 	vector<int> pts;
@@ -100,8 +99,8 @@ int main()
 		config["color_values"]["greenField"]["blue"].push_back(pts.at(i));
 	}
 	config["color_values"]["greenField"]["red"].SetStyle(YAML::EmitterStyle::Flow);
-    config["color_values"]["greenField"]["green"].SetStyle(YAML::EmitterStyle::Flow);
-    config["color_values"]["greenField"]["blue"].SetStyle(YAML::EmitterStyle::Flow);
+    	config["color_values"]["greenField"]["green"].SetStyle(YAML::EmitterStyle::Flow);
+    	config["color_values"]["greenField"]["blue"].SetStyle(YAML::EmitterStyle::Flow);
 	ofstream file("../config.yaml");
 	file << config << endl;
 	return 0;
